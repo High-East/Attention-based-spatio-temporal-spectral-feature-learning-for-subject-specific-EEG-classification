@@ -24,7 +24,7 @@ conda env create —-file bci-2021.yaml
 ## 3. Dataset
 
 ## 4. Get Started
-**Training all subject**
+**Training all subjects**
 ```shell
 sh runs/train_all_subject.sh
 ```
