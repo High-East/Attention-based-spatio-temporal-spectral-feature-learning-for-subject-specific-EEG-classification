@@ -13,20 +13,16 @@ This repo contains the implementation of the 9th IEEE international winter confe
 - Pytorch == 1.9.0
 - CUDA 11.0
 
-### Create conde environment
+### Create conda environment
 ```shell
-conda env create —file bci-2021.yaml
+conda env create —-file bci-2021.yaml
 ```
 
 ## Folder Structure
 
 ## Dataset
 
-
-
 ## Get Started
-
-
 
 ## Citation
 If you find this repository useful for your publications, please consider citing our paper.
@@ -36,6 +32,6 @@ If you find this repository useful for your publications, please consider citing
   author={Ko, Dong-Hee and Shin, Dong-Hee and Kam, Tae-Eui},
   booktitle={2021 9th International Winter Conference on Brain-Computer Interface (BCI)},
   pages={1-4},
-  year={2021},
+  year={2021}
 }
 ```
