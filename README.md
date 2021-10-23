@@ -58,4 +58,4 @@ If you find this repository useful for your publications, please consider citing
 ```
 
 ## TODO
--[ ] Update data_loader (use braindecode dataset)
+- [ ] Update data_loader (use braindecode dataset)
