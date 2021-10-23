@@ -15,9 +15,16 @@ This repo contains the implementation of the 9th IEEE international winter confe
 
 ### Dependencies
 **Create conda environment**
+- conda == 4.10.1
 ```shell
 conda env create —-file bci-2021.yaml
 ```
+```shell
+conda install pytorch=1.9.0 cudatoolkit=11.1 -c pytorch -c nvidia
+conda install numpy pandas matplotlib pyyaml ipywidgets
+pip install torchinfo
+```
+
 
 ## 2. Folder Structure
 
@@ -35,6 +42,9 @@ sh runs/train_single_subject.sh
 ```
 
 
+## 5. Experiments
+
+
 ## Citation
 If you find this repository useful for your publications, please consider citing our paper.
 ```
@@ -46,3 +56,6 @@ If you find this repository useful for your publications, please consider citing
   year={2021}
 }
 ```
+
+## TODO
+-[ ] Update data_loader (use braindecode dataset)
