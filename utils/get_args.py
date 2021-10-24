@@ -5,7 +5,7 @@ import datetime
 import torch
 
 from utils.utils import AttrDict, make_dir, print_dict
-from utils.utils import str2list, str2list_int
+from utils.utils import str2list, str2list_int, band_list
 from utils.utils import read_json, read_yaml
 
 
@@ -35,6 +35,13 @@ class Args:
         # Dataset
         parser.add_argument('--subject', type=int, default=1)
         parser.add_argument('--save_dir')
+        parser.add_argument('--band', type=band_list, help="Range of bandpass filtering")
+        parser.add_argument('--labels', default='all', type=str2list_int, help="Select classes")
+        parser.add_argument('--start_time', type=float)
+        parser.add_argument('--end_time', type=float)
+        parser.add_argument('--window_size', type=int)
+        parser.add_argument('--step', type=int)
+        parser.add_argument('--verbose', action='store_true', help="On/Off of bandpass filtering log")
 
         # Train
         parser.add_argument('--criterion', default='CEE', help="Please enter loss function you want to use.")
