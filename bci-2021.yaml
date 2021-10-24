@@ -135,11 +135,28 @@ dependencies:
   - zlib=1.2.11=h7b6447c_3
   - zstd=1.4.9=haebb681_0
   - pip:
+    - appdirs==1.4.4
+    - braindecode==0.5.1
+    - cached-property==1.5.2
     - charset-normalizer==2.0.7
     - colorama==0.4.4
+    - coverage==5.5
+    - h5py==3.5.0
     - idna==3.3
+    - joblib==1.1.0
+    - mne==0.23.4
+    - moabb==0.4.4
     - pigar==0.10.0
+    - pooch==1.5.2
+    - pyriemann==0.2.7
     - requests==2.26.0
+    - scikit-learn==1.0
+    - scipy==1.7.1
+    - seaborn==0.11.2
+    - skorch==0.10.0
+    - tabulate==0.8.9
+    - threadpoolctl==3.0.0
     - torchinfo==1.5.3
+    - tqdm==4.62.3
     - urllib3==1.26.7
 prefix: /home/user/anaconda3/envs/bci-2021

@@ -6,17 +6,17 @@ paper, [Attention-Based Spatio-Temporal-Spectral Feature Learning for Subject-Sp
 
 ![figure](figures/figure.png)
 
-## Abstract
+## 1. Abstract
 
 > Brain-computer interface (BCI) is a system that recognizes the human intentions from the brain signals for communication with external devices. The electroencephalography (EEG) signals are commonly used for motor imagery based brain-computer interface (MI-BCI) due to non-invasive, cost-effective, and portable manner. For the analysis of the EEG signals, there are several machine learning and deep learning methods. However, the majority of those methods have limitations of not considering the distinct frequency bands for subject-specific manner. Therefore, we propose the method that pays attention to the significant frequency bands for each subject and also extracts the spatio-temporal-spectral features simultaneously. We utilize filter bank, sliding window segmentation, and the convolutional neural network (CNN) to extract the spatio-temporal features with consideration of multiple frequency bands. Then, we employ the sub-band attention to determine the significant information of each frequency band. Finally, the attention-based Bi-directional Long-Short Term Memory (Bi-LSTM) is implemented to extract the temporal dynamic features. Our proposed method is evaluated on the BCI Competition IV-2a dataset by using two classes in the subject-specific manner. The experimental results demonstrate that our proposed method is effective to focus on the significant frequency band for each subject.
 
-## 1. Installation
+## 2. Installation
 
-### Environments
+### Environment
 
 - Python == 3.7.10
 - PyTorch == 1.9.0
-- CUDA 11.0
+- CUDA == 11.0
 
 ### Dependencies
 
@@ -35,37 +35,39 @@ Install packages manually
 ```shell
 conda install pytorch=1.9.0 cudatoolkit=11.1 -c pytorch -c nvidia
 conda install numpy pandas matplotlib pyyaml ipywidgets
-pip install torchinfo
+pip install torchinfo braindecode moabb
 ```
 
-## 2.Directory Structure
+## 3.Directory structure
 
 - tree
 
-## 3. Dataset
+## 4. Dataset
 
-- tree
+- Use [braindecode](https://braindecode.org)
 
 **BCI Competition IV-2a dataset**
+
 - 9 subjects
-- Classes: left hand, right hand, feet, tongue (4 classes)
+- Classes: left hand, right hand (2 classes)
 - Session-to-session set up (=subject dependent)
-- Training set: 216 trials per subject
-- Validation set: 72 trials per subject
-- Test set: 288 trials per subject
+- Training set: 144 trials per subject
+- Test set: 144 trials per subject
 
 **Preprocessing**
+
 - Sampling rate: 250Hz
-- Time segment: [0.5, 2.5]s post-cue
-- Band-pass filtering: 0-38Hz
+- Time segment: [-0.5, 4.0]s post-cue
+- Band-pass filtering: 0-42Hz
 - Normalization: exponential moving average
 
-## 4.Experiments
+## 5.Experiments
+
 |Models|S01|S02|S03|S04|S05|S06|S07|S08|S09|Mean|
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-|EEGNet|76.74|54.51|79.17|54.51|63.19|57.64|83.68|75.00|68.40|68.09|
+BCI-2021|97.92|71.53|97.22|84.72|72.92|74.31|99.31|84.03|97.22|86.58|
 
-## 5. Get Started
+## 6. Get Started
 
 **Training all subjects**
 
@@ -80,6 +82,7 @@ sh runs/train_single_subject.sh
 ```
 
 **Visualiztion**
+
 - Please note that history.ipynb file
 
 ## Citation
@@ -98,4 +101,5 @@ If you find this repository useful for your publications, please consider citing
 
 ## TODO
 
-- [ ] Update data_loader (use braindecode dataset)
+- [X] Update data_loader (use braindecode dataset)
+- [X] Update conda.yaml file
