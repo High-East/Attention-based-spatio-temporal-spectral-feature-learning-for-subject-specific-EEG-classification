@@ -24,13 +24,13 @@ paper, [Attention-Based Spatio-Temporal-Spectral Feature Learning for Subject-Sp
 
 - conda == 4.10.1
 
-Using yaml file
+(Option 1) Using yaml file
 
 ```shell
 conda env create --file bci-2021.yaml
 ```
 
-Install packages manually
+(Option 2) Install packages manually
 
 ```shell
 conda install pytorch=1.9.0 cudatoolkit=11.1 -c pytorch -c nvidia
@@ -94,7 +94,7 @@ pip install torchinfo braindecode moabb
 - Band-pass filtering: 0-42Hz
 - Normalization: exponential moving average
 
-## 5.Experiments
+## 5. Experiments
 
 |Models|S01|S02|S03|S04|S05|S06|S07|S08|S09|Mean|
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
