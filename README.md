@@ -38,9 +38,42 @@ conda install numpy pandas matplotlib pyyaml ipywidgets
 pip install torchinfo braindecode moabb
 ```
 
-## 3.Directory structure
+## 3. Directory structure
 
-- tree
+```
+.
+├── README.md
+├── base
+│   └── base_trainer.py
+├── bci-2021.yaml
+├── configs
+│   └── bci2021_config.yaml
+├── data_loader
+│   ├── __pycache__
+│   ├── data_generator.py
+│   ├── dataset
+│   └── preprocessor.py
+├── figures
+│   └── figure.png
+├── history.ipynb
+├── main.py
+├── models
+│   ├── __pycache__
+│   ├── bci2021_model.py
+│   └── model_builder.py
+├── runs
+│   ├── train_all_subject.sh
+│   └── train_single_subject.sh
+├── trainers
+│   ├── __pycache__
+│   ├── bci2021_trainer.py
+│   └── trainer_maker.py
+└── utils
+├── calculator.py
+├── get_args.py
+├── logger.py
+└── utils.py
+```
 
 ## 4. Dataset
 
