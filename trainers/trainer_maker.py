@@ -11,7 +11,6 @@ class TrainerMaker:
             criterion = self.__set_criterion(args.criterion)
             optimizer = self.__set_optimizer(args, model)
             scheduler = self.__set_scheduler(args, optimizer)
-            # history = self.__make_history(args.metrics)
             history = defaultdict(list)
             self.trainer = self.__make_trainer(args=args,
                                                model=model,
