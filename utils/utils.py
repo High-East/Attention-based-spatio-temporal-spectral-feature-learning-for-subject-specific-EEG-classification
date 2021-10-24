@@ -253,3 +253,12 @@ def guarantee_numpy(data):
         return data
     else:
         raise ValueError("Check your data type.")
+
+
+def band_list(string):
+    if string == 'all':
+        return [[0, 4], [4, 7], [7, 13], [13, 30], [30, 42]]
+    lst = string.split(",")
+    assert len(lst) % 2 == 0, "Length of the list must be even number."
+    it = iter(lst)
+    return [list(map(int, itertools.islice(it, i))) for i in ([2] * (len(lst) // 2))]
