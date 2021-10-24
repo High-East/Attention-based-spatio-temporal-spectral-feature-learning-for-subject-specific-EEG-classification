@@ -98,8 +98,3 @@ If you find this repository useful for your publications, please consider citing
   year={2021}
 }
 ```
-
-## TODO
-
-- [X] Update data_loader (use braindecode dataset)
-- [X] Update conda.yaml file
