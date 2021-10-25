@@ -114,7 +114,7 @@ sh runs/train_all_subject.sh
 sh runs/train_single_subject.sh
 ```
 
-**Visualiztion**
+**Visualization**
 
 - Please note that history.ipynb file
 
